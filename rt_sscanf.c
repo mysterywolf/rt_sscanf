@@ -26,13 +26,13 @@ int rt_sscanf(const char *str, const char *fmt, ...)
     while(*rp && *fp)
     {
         fc = *fp;
-        if(isspace(fc))
+        if(isspace((int)fc))
         {
           /* do nothing */
         }
         else if(fc != '%')
         {
-            while(isspace(*rp)) rp++;
+            while(isspace((int)*rp)) rp++;
             if(*rp == 0)
             {
                 break;
